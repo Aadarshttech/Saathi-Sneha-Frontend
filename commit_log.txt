@@ -42,3 +42,4 @@ Update 2: style: Implement glassmorphism design system
 Update 3: chore: Add custom fonts and typography rules
 Update 4: feat: Build top navigation bar
 Update 5: feat: Add responsive mobile menu drawer
+Update 6: style: Enhance hero section typography
