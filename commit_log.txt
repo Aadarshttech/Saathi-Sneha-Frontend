@@ -50,3 +50,4 @@ Update 10: style: Refine button hover animations
 Update 11: chore: Optimize image loading priorities
 Update 12: feat: Build services grid layout
 Update 13: style: Implement scroll animations
+Update 14: feat: Add care options pricing cards
