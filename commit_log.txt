@@ -54,3 +54,4 @@ Update 14: feat: Add care options pricing cards
 Update 15: fix: Correct responsive grid breakpoints
 Update 16: style: Polish footer design
 Update 17: feat: Implement custom loading screen
+Update 18: chore: Update metadata and SEO tags
