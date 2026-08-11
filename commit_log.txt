@@ -57,3 +57,4 @@ Update 17: feat: Implement custom loading screen
 Update 18: chore: Update metadata and SEO tags
 Update 19: style: Refine accent colors and gradients
 Update 20: fix: Ensure text wrapping on small screens
+Update 21: feat: Add smooth scrolling behavior
