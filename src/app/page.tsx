@@ -1189,28 +1189,39 @@ export default function HomePage() {
         {/* Bottom: Social Icons, Copyright & Nepali Text */}
         <div className="relative z-20 w-full px-6 md:px-12 pb-8 mt-auto pt-[120px] md:pt-[180px] flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
            
-           {/* Left: Social Icons + Copyright */}
+           {/* Left: Social Icons, Links + Copyright */}
            <div className="flex flex-col items-center md:items-start gap-5 w-full md:w-1/3">
-              {/* Social Icons — bigger, glassmorphic */}
+              {/* Social Icons — responsive colors (dark on mobile, white on desktop) */}
               <div className="flex items-center gap-4">
-                 <Link href="#" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
+                 <Link href="#" className="w-12 h-12 rounded-full bg-[#209D8B]/10 md:bg-white/10 backdrop-blur-sm border border-[#209D8B]/20 md:border-white/20 flex items-center justify-center text-[#209D8B] md:text-white hover:bg-[#209D8B]/20 md:hover:bg-white/25 hover:-translate-y-1 hover:shadow-md md:hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
                    <Facebook size={22} />
                  </Link>
-                 <Link href="#" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
+                 <Link href="#" className="w-12 h-12 rounded-full bg-[#209D8B]/10 md:bg-white/10 backdrop-blur-sm border border-[#209D8B]/20 md:border-white/20 flex items-center justify-center text-[#209D8B] md:text-white hover:bg-[#209D8B]/20 md:hover:bg-white/25 hover:-translate-y-1 hover:shadow-md md:hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
                    <Instagram size={22} />
                  </Link>
-                 <Link href="#" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
+                 <Link href="#" className="w-12 h-12 rounded-full bg-[#209D8B]/10 md:bg-white/10 backdrop-blur-sm border border-[#209D8B]/20 md:border-white/20 flex items-center justify-center text-[#209D8B] md:text-white hover:bg-[#209D8B]/20 md:hover:bg-white/25 hover:-translate-y-1 hover:shadow-md md:hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)] transition-all duration-300">
                    <MessageCircle size={22} />
                  </Link>
               </div>
 
               {/* Thin separator */}
-              <div className="w-48 h-[1px] bg-white/15"></div>
+              <div className="w-48 h-[1px] bg-[#209D8B]/20 md:bg-white/15"></div>
 
-              {/* Copyright */}
-              <p className="text-white/80 text-[14px] font-medium tracking-wide">
-                 © 2025 Saathi Sneha Care. All rights reserved.
-              </p>
+              {/* Links */}
+              <div className="flex gap-4 text-[13px] text-[#4a5f73] md:text-white/70 font-medium">
+                <Link href="/privacy" className="hover:text-[#209D8B] md:hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-[#209D8B] md:hover:text-white transition-colors">Terms of Service</Link>
+              </div>
+
+              {/* Copyright & Credit */}
+              <div className="flex flex-col items-center md:items-start gap-1 text-center md:text-left mt-1">
+                <p className="text-[#334659] md:text-white/80 text-[13px] font-medium tracking-wide">
+                   © 2025 Saathi Sneha Care. All rights reserved.
+                </p>
+                <p className="text-[#334659] md:text-white/80 text-[13px] font-medium tracking-wide">
+                   Designed and developed by <a href="https://aadarshapandit.com.np" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-[#209D8B] md:hover:text-white underline decoration-[#209D8B]/30 md:decoration-white/30 underline-offset-2 transition-colors">Aadarsh Pandit</a>
+                </p>
+              </div>
            </div>
 
            {/* Center: Creative Nepali Text (Shifted Diagonally Up) */}
