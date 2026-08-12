@@ -184,7 +184,7 @@ export default function HomePage() {
               src="/mobilebg.png" 
               alt="Hero Background Mobile" 
               fill 
-              className="block lg:hidden object-cover object-[center_bottom] saturate-[.85]"
+              className="block lg:hidden object-cover object-[center_35%] saturate-[.85]"
               priority
             />
             {/* Desktop Background */}
@@ -233,7 +233,7 @@ export default function HomePage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-[2.1rem] leading-[1.1] md:text-6xl lg:text-[72px] font-black lg:leading-[1.05] tracking-tight text-[#1a2b3c] mb-4 lg:mb-6">
+            <h1 className="text-[2.1rem] leading-[1.1] md:text-[3.5rem] lg:text-[72px] font-black lg:leading-[1.05] tracking-tight text-[#1a2b3c] mb-4 lg:mb-6">
               Your parents <br /> deserve <br />
               <span className="relative inline-block mt-1 lg:mt-2">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#209D8B] to-[#156e61] pr-2" style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic', fontWeight: 800 }}>expert care</span>
@@ -252,15 +252,15 @@ export default function HomePage() {
             </h1>
 
             {/* Paragraph with Horizontal Divider on Mobile, Vertical on Desktop */}
-            <div className="relative pl-0 lg:pl-5 mb-6 lg:mb-10 w-[140px] sm:w-[200px] lg:w-auto">
+            <div className="relative pl-0 lg:pl-5 mb-6 lg:mb-10 w-[140px] sm:w-[220px] md:w-[280px] lg:w-auto">
               <div className="absolute left-0 top-1 bottom-1 w-[3px] lg:w-1 bg-gradient-to-b from-[#209D8B] to-transparent rounded-full opacity-60 hidden lg:block"></div>
               <div className="w-12 h-[3px] bg-[#209D8B] rounded-full mb-3 block lg:hidden opacity-80"></div>
-              <p className="text-[14px] sm:text-[15px] md:text-lg lg:text-xl text-[#3b5266] leading-[1.3] lg:leading-relaxed font-medium">
+              <p className="text-[14px] sm:text-[15px] md:text-[17px] lg:text-xl text-[#3b5266] leading-[1.3] lg:leading-relaxed font-medium drop-shadow-sm">
                 Professional medical care at home in Nepal, with real-time updates for families abroad.
               </p>
             </div>
             {/* Action Area (Pushed down on mobile to clear the subjects) */}
-            <div className="flex flex-col items-start mt-10 sm:mt-16 lg:mt-0">
+            <div className="flex flex-col items-start mt-10 sm:mt-16 md:mt-24 lg:mt-0">
               {/* Mobile Trust Badge (Inspired by reference) */}
               <div className="flex lg:hidden items-center gap-3 bg-[#e6f4f1] pr-4 p-1.5 rounded-2xl mb-5 shadow-sm">
                 <div className="w-9 h-9 rounded-xl bg-[#209D8B] text-white flex items-center justify-center shadow-sm">
