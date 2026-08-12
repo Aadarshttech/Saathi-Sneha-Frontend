@@ -72,3 +72,4 @@ Update 32: style: Standardize border radii
 Update 33: feat: Implement custom logo animation
 Update 34: fix: Prevent horizontal overflow
 Update 35: style: Update hero text gradients
+Update 36: feat: Add patient testimonials section
