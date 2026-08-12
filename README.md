@@ -1,37 +1,67 @@
-# Saathi Sneha Care - Premium Elder Care Platform
+<div align="center">
+  <img src="public/logo.png" alt="Saathi Sneha Care Logo" width="120" />
+  <h1>Saathi Sneha Care 💚</h1>
+  <p><strong>Professional home care for your parents in Nepal.</strong></p>
+  <p><i>Care that feels like family. (साथी स्नेह केयर — आमाबाको हेरचाह)</i></p>
+</div>
 
-![Saathi Sneha Care](https://img.shields.io/badge/Status-Active-brightgreen) ![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20|%20Tailwind%20CSS-blue)
+<br />
 
-A modern, responsive, and beautifully designed web application for **Saathi Sneha Care**, a premium elder care service providing professional medical support to families in Nepal.
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</div>
 
-## ✨ Features
+<br />
 
-- **Top-Tier Medical Design:** A sleek, glassmorphism-inspired UI tailored for healthcare, establishing immediate trust.
-- **Flawless Mobile Responsiveness:** Extensively optimized hero section, responsive typography, and mobile-specific navigation drawers to ensure families can access care from any device perfectly.
-- **Fluid Animations:** Integrated with `framer-motion` for subtle scroll animations, hover states, and dynamic components that make the interface feel alive.
-- **Fast & Modern Stack:** Built on the bleeding edge using **Next.js 14**, **React 18**, and **Tailwind CSS**.
+## 🌟 Overview
+**Saathi Sneha Care** is a modern, highly responsive frontend web application built to showcase professional home health care services tailored for elderly parents in Nepal. 
+
+This repository contains the standalone frontend architecture, featuring luxurious glassmorphic UI elements, buttery-smooth cinematic animations, and robust responsive layouts.
+
+## ✨ Key Features
+- **Cinematic Entry:** A beautiful, animated loading screen utilizing SVG path tracing (`framer-motion`) that transitions smoothly into the homepage.
+- **Glassmorphism UI:** Elegant frosted glass navigation bars, cards, and floating elements that offer a premium, modern aesthetic.
+- **Responsive Design:** Carefully crafted layouts ensuring pixel-perfect display across mobile, tablet, and ultra-wide desktop screens.
+- **Dynamic Interactions:** Interactive hover states, scale transforms, and beautiful SVG decorative elements scattered throughout the user journey.
+
+## 🛠️ Tech Stack
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
 ## 🚀 Getting Started
 
-1. **Install Dependencies:**
+### Prerequisites
+Make sure you have `Node.js` and `pnpm` installed.
+
+### Installation
+1. Clone the repository:
    ```bash
-   npm install
+   git clone https://github.com/Aadarshttech/Saathi-Sneha-Frontend.git
    ```
-
-2. **Run the Development Server:**
+2. Navigate to the project directory:
    ```bash
-   npm run dev
+   cd Saathi-Sneha-Frontend
    ```
-   *Note: The server is bound to `0.0.0.0` by default to easily allow mobile testing on your local network.*
+3. Install dependencies using `pnpm`:
+   ```bash
+   pnpm install
+   ```
+4. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 👨‍💻 Developed By
+Designed and developed by **[Aadarsh Pandit](https://aadarshapandit.com.np)**.
 
-## 🛠 Tech Stack
-
-- **Framework:** [Next.js](https://nextjs.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-
-## 🎨 Design Philosophy
-The UI relies heavily on modern spacing principles, typography (Quicksand & Playfair Display), and distinct color themes (`#209D8B`) to create a calm, professional, and trustworthy aesthetic fitting for premium healthcare.
+---
+<div align="center">
+  <p>Built with ❤️ in Nepal</p>
+</div>
