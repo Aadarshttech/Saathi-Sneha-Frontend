@@ -1187,7 +1187,7 @@ export default function HomePage() {
         </div>
 
         {/* Bottom: Social Icons, Copyright & Nepali Text */}
-        <div className="relative z-20 w-full px-6 md:px-12 pb-8 mt-auto pt-[120px] md:pt-[180px] flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
+        <div className="relative z-20 w-full px-6 md:px-12 pb-36 md:pb-8 mt-auto pt-[120px] md:pt-[180px] flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
            
            {/* Left: Social Icons, Links + Copyright */}
            <div className="flex flex-col items-center md:items-start gap-5 w-full md:w-1/3">
