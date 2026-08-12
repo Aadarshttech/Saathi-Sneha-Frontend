@@ -54,13 +54,6 @@ export default function HomePage() {
   }, [showLoading]);
 
   useEffect(() => {
-    // If mobile view, skip the flashy animation entirely to keep it simple
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      setShowLoading(false);
-      setIsContentReady(true);
-      return;
-    }
-
     // Simulate website content loading for 4.5 seconds to allow full cinematic intro
     const t = setTimeout(() => {
       setIsContentReady(true);
