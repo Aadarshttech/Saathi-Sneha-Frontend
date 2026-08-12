@@ -1039,11 +1039,11 @@ export default function HomePage() {
            </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full mt-8 lg:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-10 items-start">
             
             {/* Column 1: Brand & Info */}
-            <div className="lg:col-span-4 flex flex-col mt-8 lg:mt-16">
+            <div className="lg:col-span-4 flex flex-col">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 shrink-0 group mb-8">
                 <div className="w-[84px] h-[84px] group-hover:scale-105 transition-transform duration-500">
