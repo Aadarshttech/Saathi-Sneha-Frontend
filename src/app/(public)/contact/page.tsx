@@ -99,7 +99,7 @@ export default function ContactPage() {
 
             {/* Form — needs Suspense because it reads searchParams */}
             <div className="lg:col-span-3">
-              <Suspense fallback={<div className="h-96 rounded-2xl bg-gray-50" />}>
+              <Suspense fallback={<div className="h-96 rounded-2xl bg-gray-50 md:animate-pulse" />}>
                 <ContactForm />
               </Suspense>
             </div>
