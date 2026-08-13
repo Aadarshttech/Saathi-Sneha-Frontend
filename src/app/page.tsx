@@ -228,7 +228,7 @@ export default function HomePage() {
           <div className="max-w-[500px] lg:max-w-[600px] flex flex-col items-start text-left">
             {/* Trust Badge - Hide on mobile since we have one below */}
             <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-white/80 shadow-[0_4px_15px_rgba(0,0,0,0.05)] mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-[#209D8B] animate-pulse"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#209D8B]"></span>
               <span className="text-xs font-bold uppercase tracking-widest text-[#209D8B]">Nepal&apos;s Premium Elder Care</span>
             </div>
 
