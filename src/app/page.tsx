@@ -42,6 +42,15 @@ export default function HomePage() {
   const [isContentReady, setIsContentReady] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   useEffect(() => {
     if (showLoading) {
       document.body.style.overflow = "hidden";
@@ -450,8 +459,8 @@ export default function HomePage() {
                 }
               ].map((item, index) => (
                 <motion.div 
-                  initial={{ opacity: 0, y: 80 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={isMobile ? false : { opacity: 0, y: 80 }}
+                  whileInView={isMobile ? false : { opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                   key={index} 
@@ -533,8 +542,8 @@ export default function HomePage() {
                 { title: "Medication Mgt", desc: "Medication review and compliance", icon: <Pill size={28} strokeWidth={1.5} />, side: 'right' },
               ].map((srv, i) => (
                 <motion.div 
-                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  initial={isMobile ? false : { opacity: 0, scale: 0.9, y: 20 }}
+                  whileInView={isMobile ? false : { opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 1.0, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   key={i} 
@@ -567,8 +576,8 @@ export default function HomePage() {
                   { title: "Chronic Disease", desc: "Monitoring of chronic conditions", icon: <HeartPulse size={28} strokeWidth={1.5} />, side: 'left' },
                 ].map((srv, index) => (
                   <motion.div 
-                    initial={{ opacity: 0, x: -80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={isMobile ? false : { opacity: 0, x: -80 }}
+                    whileInView={isMobile ? false : { opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                     key={index} 
@@ -621,8 +630,8 @@ export default function HomePage() {
 
               {/* Center Model Image */}
               <motion.div 
-                initial={{ opacity: 0, scale: 0.7 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={isMobile ? false : { opacity: 0, scale: 0.7 }}
+                whileInView={isMobile ? false : { opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex-1 max-w-[450px] aspect-square flex items-center justify-center z-40 pointer-events-none"
@@ -639,8 +648,8 @@ export default function HomePage() {
                   { title: "Medication Mgt", desc: "Medication review and compliance", icon: <Pill size={28} strokeWidth={1.5} />, side: 'right' },
                 ].map((srv, index) => (
                   <motion.div 
-                    initial={{ opacity: 0, x: 80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={isMobile ? false : { opacity: 0, x: 80 }}
+                    whileInView={isMobile ? false : { opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                     key={index} 
@@ -744,8 +753,8 @@ export default function HomePage() {
             
             {/* Plan 1 */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
@@ -776,8 +785,8 @@ export default function HomePage() {
             
             {/* Plan 2 - MOST POPULAR */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative bg-white/95 backdrop-blur-xl border border-[#209D8B]/40 rounded-[2rem] p-8 pt-12 shadow-[0_20px_50px_-15px_rgba(32,157,139,0.2)] text-center flex flex-col h-full transform md:-translate-y-4 hover:-translate-y-6 transition-all duration-500 group"
@@ -813,8 +822,8 @@ export default function HomePage() {
             
             {/* Plan 3 */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
@@ -883,8 +892,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
              {/* Card 1 */}
              <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
+               initial={isMobile ? false : { opacity: 0, y: 40 }}
+               whileInView={isMobile ? false : { opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
@@ -909,8 +918,8 @@ export default function HomePage() {
 
              {/* Card 2 */}
              <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
+               initial={isMobile ? false : { opacity: 0, y: 40 }}
+               whileInView={isMobile ? false : { opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
                className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
@@ -935,8 +944,8 @@ export default function HomePage() {
 
              {/* Card 3 */}
              <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
+               initial={isMobile ? false : { opacity: 0, y: 40 }}
+               whileInView={isMobile ? false : { opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
@@ -985,8 +994,8 @@ export default function HomePage() {
                    { icon: <CreditCard size={18} strokeWidth={2.5} />, text: "Pay by credit card from abroad" },
                  ].map((item, i) => (
                    <motion.div 
-                     initial={{ opacity: 0, x: -20 }}
-                     whileInView={{ opacity: 1, x: 0 }}
+                     initial={isMobile ? false : { opacity: 0, x: -20 }}
+                     whileInView={isMobile ? false : { opacity: 1, x: 0 }}
                      transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
                      viewport={{ once: true, margin: "-50px" }}
                      key={i} 
