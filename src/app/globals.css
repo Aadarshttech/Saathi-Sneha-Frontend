@@ -20,3 +20,12 @@
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-brand-border rounded-full; }
 }
+
+@media (max-width: 1023px) {
+  .mobile-no-framer {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

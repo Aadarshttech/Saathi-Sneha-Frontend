@@ -42,15 +42,6 @@ export default function HomePage() {
   const [isContentReady, setIsContentReady] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-
   useEffect(() => {
     if (showLoading) {
       document.body.style.overflow = "hidden";
@@ -459,12 +450,12 @@ export default function HomePage() {
                 }
               ].map((item, index) => (
                 <motion.div 
-                  initial={isMobile ? false : { opacity: 0, y: 80 }}
-                  whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 80 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                   key={index} 
-                  className="group relative bg-white/95 border border-white/80 rounded-[2rem] p-8 pt-16 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_-15px_rgba(32,157,139,0.25)] hover:-translate-y-3 transition-all duration-500 text-center flex flex-col items-center transform-gpu cursor-default"
+                  className="mobile-no-framer group relative bg-white/95 border border-white/80 rounded-[2rem] p-8 pt-16 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_-15px_rgba(32,157,139,0.25)] hover:-translate-y-3 transition-all duration-500 text-center flex flex-col items-center transform-gpu cursor-default"
                 >
                   
                   {/* Subtle Glowing Background on Hover */}
@@ -542,12 +533,12 @@ export default function HomePage() {
                 { title: "Medication Mgt", desc: "Medication review and compliance", icon: <Pill size={28} strokeWidth={1.5} />, side: 'right' },
               ].map((srv, i) => (
                 <motion.div 
-                  initial={isMobile ? false : { opacity: 0, scale: 0.9, y: 20 }}
-                  whileInView={isMobile ? undefined : { opacity: 1, scale: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 1.0, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   key={i} 
-                  className="group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1.5 transition-all duration-500 transform-gpu flex items-center gap-4"
+                  className="mobile-no-framer group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1.5 transition-all duration-500 transform-gpu flex items-center gap-4"
                 >
                   {/* Subtle hover gradient background */}
                   <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-br from-[#209D8B]/[0.01] to-[#209D8B]/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -576,12 +567,12 @@ export default function HomePage() {
                   { title: "Chronic Disease", desc: "Monitoring of chronic conditions", icon: <HeartPulse size={28} strokeWidth={1.5} />, side: 'left' },
                 ].map((srv, index) => (
                   <motion.div 
-                    initial={isMobile ? false : { opacity: 0, x: -80 }}
-                    whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                     key={index} 
-                    className="group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 xl:p-6 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1 hover:translate-x-2 transition-all duration-500 transform-gpu flex items-center gap-4 xl:gap-5"
+                    className="mobile-no-framer group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 xl:p-6 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1 hover:translate-x-2 transition-all duration-500 transform-gpu flex items-center gap-4 xl:gap-5"
                   >
                     {/* Subtle hover gradient pulling towards center */}
                     <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-r from-transparent via-transparent to-[#209D8B]/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -630,11 +621,11 @@ export default function HomePage() {
 
               {/* Center Model Image */}
               <motion.div 
-                initial={isMobile ? false : { opacity: 0, scale: 0.7 }}
-                whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.7 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                className="relative flex-1 max-w-[450px] aspect-square flex items-center justify-center z-40 pointer-events-none"
+                className="mobile-no-framer relative flex-1 max-w-[450px] aspect-square flex items-center justify-center z-40 pointer-events-none"
               >
                 <div className="absolute inset-0 rounded-full bg-white/60 border-2 border-white shadow-[0_0_80px_rgba(32,157,139,0.15)] backdrop-blur-md transform scale-90 z-0"></div>
                 <Image src="/servimodel.png" alt="Nurse Model" fill className="object-contain object-bottom drop-shadow-2xl z-40 scale-110 origin-bottom" />
@@ -648,12 +639,12 @@ export default function HomePage() {
                   { title: "Medication Mgt", desc: "Medication review and compliance", icon: <Pill size={28} strokeWidth={1.5} />, side: 'right' },
                 ].map((srv, index) => (
                   <motion.div 
-                    initial={isMobile ? false : { opacity: 0, x: 80 }}
-                    whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: 80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                     key={index} 
-                    className="group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 xl:p-6 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1 hover:-translate-x-2 transition-all duration-500 transform-gpu flex items-center gap-4 xl:gap-5"
+                    className="mobile-no-framer group relative bg-white/95 border border-transparent hover:border-[#209D8B]/30 rounded-[1.5rem] p-5 xl:p-6 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-1 hover:-translate-x-2 transition-all duration-500 transform-gpu flex items-center gap-4 xl:gap-5"
                   >
                     {/* Subtle hover gradient pulling towards center */}
                     <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-l from-transparent via-transparent to-[#209D8B]/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -753,11 +744,11 @@ export default function HomePage() {
             
             {/* Plan 1 */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
+              className="mobile-no-framer relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
             >
               {/* Inner Glow on Hover */}
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -785,11 +776,11 @@ export default function HomePage() {
             
             {/* Plan 2 - MOST POPULAR */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative bg-white/95 backdrop-blur-xl border border-[#209D8B]/40 rounded-[2rem] p-8 pt-12 shadow-[0_20px_50px_-15px_rgba(32,157,139,0.2)] text-center flex flex-col h-full transform md:-translate-y-4 hover:-translate-y-6 transition-all duration-500 group"
+              className="mobile-no-framer relative bg-white/95 backdrop-blur-xl border border-[#209D8B]/40 rounded-[2rem] p-8 pt-12 shadow-[0_20px_50px_-15px_rgba(32,157,139,0.2)] text-center flex flex-col h-full transform md:-translate-y-4 hover:-translate-y-6 transition-all duration-500 group"
             >
               {/* Inner Glow on Hover */}
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -822,11 +813,11 @@ export default function HomePage() {
             
             {/* Plan 3 */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
+              className="mobile-no-framer relative bg-white/70 backdrop-blur-xl border border-white rounded-[2rem] p-8 pt-12 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] text-center flex flex-col h-full hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 group"
             >
               {/* Inner Glow on Hover */}
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -892,11 +883,11 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
              {/* Card 1 */}
              <motion.div 
-               initial={isMobile ? false : { opacity: 0, y: 40 }}
-               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-               className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
+               className="mobile-no-framer bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
              >
                {/* Inner Glow on Hover */}
                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -918,11 +909,11 @@ export default function HomePage() {
 
              {/* Card 2 */}
              <motion.div 
-               initial={isMobile ? false : { opacity: 0, y: 40 }}
-               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
-               className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
+               className="mobile-no-framer bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
              >
                {/* Inner Glow on Hover */}
                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -944,11 +935,11 @@ export default function HomePage() {
 
              {/* Card 3 */}
              <motion.div 
-               initial={isMobile ? false : { opacity: 0, y: 40 }}
-               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, margin: "-50px" }}
                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-               className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
+               className="mobile-no-framer bg-white/95 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-15px_rgba(32,157,139,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex gap-5 border border-white group cursor-default"
              >
                {/* Inner Glow on Hover */}
                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-[#209D8B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -994,12 +985,12 @@ export default function HomePage() {
                    { icon: <CreditCard size={18} strokeWidth={2.5} />, text: "Pay by credit card from abroad" },
                  ].map((item, i) => (
                    <motion.div 
-                     initial={isMobile ? false : { opacity: 0, x: -20 }}
-                     whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+                     initial={{ opacity: 0, x: -20 }}
+                     whileInView={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
                      viewport={{ once: true, margin: "-50px" }}
                      key={i} 
-                     className="relative z-10 flex items-center gap-4 group cursor-default"
+                     className="mobile-no-framer relative z-10 flex items-center gap-4 group cursor-default"
                    >
                      {/* Icon */}
                      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#209D8B] shrink-0 border-2 border-[#209D8B]/20 shadow-sm group-hover:bg-[#209D8B] group-hover:text-white group-hover:scale-110 group-hover:border-[#209D8B] transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(32,157,139,0.4)] relative">
